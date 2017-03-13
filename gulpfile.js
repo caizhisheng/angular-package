@@ -156,12 +156,12 @@ gulp.task('constants', function() {
 });
 
 //启动站点
-gulp.task('mdp',['server-start','watch'],function() {
+gulp.task('start',['server-start','watch'],function() {
 	  console.log("开始启动项目...")
 });
 
 //打包站点
-gulp.task('mdp-build',['bulid'],function() {
+gulp.task('mdp-start',['bulid'],function() {
     console.log("打包项目成功...")
 });
 
