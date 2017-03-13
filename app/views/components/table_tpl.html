@@ -1,0 +1,126 @@
+<style>
+    .dydatatable-btns .btn {
+        margin-right: 6px;
+    }
+    .dy-pagination .pagination {
+        margin: 0;
+    }
+    .dataTables_paginate {
+        padding-bottom: 13px;
+        margin-right: 18px;
+    }
+    .current {
+        background-color: #1CAF9A !important;
+        border-color: #1CAF9A !important;
+        color: #fff !important;
+    }
+    .tabsty {
+      padding: 0 10px 0 10px;
+    }
+    .table {
+      margin-bottom: 16px !important;
+      border-top: 1px solid #eee;
+    }
+    .table tr:nth-child(odd) {
+      background-color: #f5f5f5;
+    }
+    .table tr:nth-child(even) {
+      background-color: #fcfcfc;
+    }
+    .table th {
+      padding-left: 20px !important;
+    }
+    .table td {
+      padding: 0px 0 0px 20px !important;    
+      line-height: 48px !important;
+    }
+
+    .table td span{
+      line-height: 28px !important;
+      display: inline-block;
+    }
+    .table .operation:hover,.table .operation:active {
+     text-decoration: none;
+    }
+    .pageindex {
+     float: left;
+     margin-left: 29px;
+    }
+    .text-more {
+      display: inline-block;
+      background: url('../build/assets/images/text_more.png') no-repeat;
+      height: 12px;
+      width: 16px;
+      cursor: pointer;
+      margin-left: 4px;
+    }
+    .opt-btn {
+      cursor: pointer;
+      color: #337ab7;
+    }
+    .opt-btn:hover {
+      text-decoration: none;
+    }
+    .panel {
+      border-radius: 5px !important;
+    }
+</style>
+<table class="table table-success mb30">
+  <thead>
+    <tr>
+      <th ng-repeat="th in trs" ng-bind="th.title"></th>
+    </tr>
+    <tr ng-if="loading == true">
+      <td colspan="{{trs.length}}" class="text-center"> <i class="fa fa-spinner fa-spin fa-1x fa-fw margin-bottom"></i>
+        <span>数据加载中..</span>
+      </td>
+    </tr>
+  </thead>
+  <tbody>
+    <!--无数据-->
+    <tr ng-if="datalist.length == 0 || datalist == undefined">
+      <td colspan="{{trs.length}}" class="text-center">暂无数据</td>
+    </tr>
+    <!--有数据-->
+    <tr ng-repeat="list in datalist">
+
+      <td ng-repeat="td in trs" ng-bind-html="list[td.attribute]" ng-if="td.type == 'data'"></td> 
+
+      <td ng-repeat="td in trs" ng-if="td.type == 'action'">
+        <div class="dydatatable-btns">
+          <a ng-repeat="btn in td.buttons" class="opt-btn"  ng-click="actions(btn,list['_links'].self.href,list['id'],list['sendDetail'],list['requestId'],list['code'])">{{btn.title}}
+          &nbsp;</a>
+        </div>
+      </td>
+      <td ng-repeat="td in trs" ng-if="td.type == 'radio'">
+        <div class="dydatatable-btns">
+          <input type="radio" ng-repeat="btn in td.buttons" name="topcode" ng-click="actions(btn,list['code'])"/>
+        </div>
+      </td>
+    </tr>
+  </tbody>
+</table>
+
+<!--//angular-ui-bootstrap pagination-->
+<div class="row" ng-if="datalist.length >
+  0 && isPager != false">
+  <div class="pageindex">
+    <span>当前页码：{{pageNum}}/{{totaPages}}</span>
+  </div>
+  <div class="dataTables_paginate paging_full_numbers" id="table2_paginate">
+    <a class="paginate_button first" ng-click="firstPager()" ng-disabled="pageNum == 1" ng-style="{cursor:(pageNum == 1)?'no-drop':''}">首页</a>
+    <a class="paginate_button previous" ng-click="prePager()" ng-disabled="pageNum == 1" ng-style="{cursor:(pageNum == 1)?'no-drop':''}">上一页</a>
+    <span class="pager-btn">
+      <a ng-repeat="i in range" ng-bind="i" ng-click="changepager(i)" ng-class="pageNum == i ? 'paginate_button current' : 'paginate_button'" ng-show="$index<totaPages && $index<10"></a>
+    </span>
+    <a class="paginate_button next" ng-click="nextPager()" ng-disabled="pageNum == totaPages" ng-style="{cursor:(pageNum == totaPages)?'no-drop':''}">下一页</a>
+    <a class="paginate_button last" ng-click="lastPager()"  ng-disabled="pageNum == totaPages" ng-style="{cursor:(pageNum == totaPages)?'no-drop':''}" ng-style="{cursor:(pageNum == totaPages-1)?'no-drop':''}">末页</a>
+  </div>
+  <div style="clear: both;"></div>
+</div>
+
+<script type="text/javascript">
+  function showMoreTxt(indx) {
+    layer.alert($(indx).attr("msg-text"));
+  }
+</script>

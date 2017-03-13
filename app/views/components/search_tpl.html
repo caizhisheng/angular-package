@@ -1,0 +1,25 @@
+<style type="text/css">
+/*  .form-control {
+    height: none !important;
+  }*/
+  .search .form-group {
+    line-height: 60px;
+  }
+  .search {
+    padding: 10px 0 10px 22px !important;
+  }
+</style>
+<div class="panel-body search">
+    <form class="form-inline search-form">
+      <div class="form-group" ng-repeat="income in searchs">
+        <label class="sr-only" for="">{{income.title}}</label>
+        <input type="text" class="form-control" id="{{income.name}}" name="{{income.name}}" placeholder="{{income.title}}" ng-if="income.type=='date'" onclick="laydate()">
+        <input type="{{income.type}}" class="form-control" id="{{income.name}}" name="{{income.name}}" placeholder="{{income.title}}" ng-if="income.type=='text'">
+        <select class="form-control" ng-if="income.type=='select'" style="width: 158px;"  id="{{income.name}}" name="{{income.name}}">
+          <option value="{{opt.val}}" ng-repeat="opt in income.options">{{opt.name}}</option>
+        </select>
+      </div>
+	     <button type="submit" class="btn btn-info" ng-if="searchs.length>0" ng-click="search()">查询</button>
+	    <!--  <button type="reset" class="btn btn-default"ng-if="searchs.length>0">重置</button> -->
+    </form> 
+</div> 

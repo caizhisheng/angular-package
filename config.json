@@ -1,0 +1,8 @@
+{
+  "development": {
+    "apiUrl": "http://10.214.168.60:10000/api"
+  },
+  "production": {
+    "apiUrl": ""
+  }
+}

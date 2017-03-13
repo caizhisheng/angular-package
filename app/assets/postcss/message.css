@@ -1,0 +1,41 @@
+@alias { 
+	mt: margin-top;
+	mr: margin-right;
+	mb: margin-bottom;
+	ml: margin-left;
+	bg: background-color;
+	br: border;
+	brr: border-right;
+}
+/*页面样式*/
+.msg-page {
+  fz: 28px;
+}
+.tab-header {
+	fz: 18px;
+	color: #428bca;
+	opacity: 1; 
+	float: left; 
+	ml: 0px;
+}
+.tab-header i {
+	top:3px;
+}
+.panel-btns a {
+	float: left !important;
+	ml: 0px !important;
+	mt: -9px !important;
+	color: #fff;
+	opacity: 1;
+}
+.btn-info {
+   bg: #1CAF9A !important; 
+}
+.channels .btn-group button {
+   bg: #1CAF9A !important; 
+   br: #1CAF9A !important;
+}
+.channels .btn-group button:hover {
+   bg: #1CAF9A !important; 
+   br: #1CAF9A !important;
+}

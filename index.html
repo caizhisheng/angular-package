@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>万达消息集成平台</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="/build/assets/js/bracket/css/bootstrap.min.css">
+	<link rel="stylesheet" type="text/css" href="/build/assets/js/bracket/css/style.home.css">
+	<link rel="stylesheet" type="text/css" href="/build/assets/js/bracket/css/jquery.datatables.css">
+    <link rel="stylesheet" type="text/css" href="/build/assets/js/layer-v2.3/layer/skin/layer.css">
+    <link rel="stylesheet" type="text/css" href="/build/assets/js/bracket/css/dropzone.css">
+    <link rel="stylesheet" type="text/css" href="/build/assets/js/bracket/css/dropzone.css">
+    <link rel="stylesheet" type="text/css" href="/build/assets/js/bracket/css/morris.css">
+    <link href="/build/assets/images/favicon.ico" rel="icon" type="image/x-icon" />
+    <link rel="stylesheet" type="text/css" href="/build/assets/css/message.css">
+    <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!--[if lt IE 9]>
+    <script src="@Url.Content("/build/assets/js/bracket/js/html5shiv.js")"></script>
+    <script src="@Url.Content("/build/assets/js/bracket/js/respond.min.js")"></script>
+    <![endif]-->
+<body ng-app="ngApp">
+    <left-panel></left-panel>
+    <div class="mainpanel" ng-controller="commonCtrl" style="height: initial;">
+      <header></header>
+      <div class="content" ui-view></div>
+    </div>
+    <div id="preloader">
+      <div id="status"><i class="fa fa-spinner fa-spin"></i></div>
+    </div>      
+    <script src="/build/assets/js/bracket/js/jquery-1.10.2.min.js"></script>
+    <script src="/build/assets/js/bracket/js/jquery-migrate-1.2.1.min.js"></script>
+    <script src="/build/assets/js/bracket/js/bootstrap.min.js"></script>
+    <script src="/build/assets/js/layer-v2.3/layer/layer.js"></script>
+    <script src="/build/assets/js/bracket/js/jquery.validate.min.js"></script>
+    <script src="/build/assets/js/bracket/js/jquery.metadata.js"></script>
+    <script src="/build/assets/js/bracket/js/messages_zh.js"></script>
+    <script src="/build/assets/js/bracket/js/modernizr.min.js"></script>
+    <script src="/build/assets/js/bracket/js/jquery.sparkline.min.js"></script>
+    <script src="/build/assets/js/bracket/js/toggles.min.js"></script>
+    <script src="/build/assets/js/bracket/js/retina.min.js"></script>
+    <script src="/build/assets/js/bracket/js/jquery.cookies.js"></script>
+    <script src="/build/assets/js/bracket/js/dropzone.min.js"></script>
+    <script src="/build/assets/js/laydate/laydate.js"></script>
+    <script src="/build/assets/js/bracket/js/morris.min.js"></script>
+    <script src="/build/assets/js/bracket/js/raphael-2.1.0.min.js"></script>
+    <script src="/build/assets/js/bracket/js/custom.js"></script>
+    <script type="text/javascript">
+        //sso登陆成功后首次获得systemCode.
+        $(function() {
+           $.ajax({
+            type : "get",
+            url : "/current-user",
+            async : false,
+            success : function(response) {
+             localStorage.syscode = response.systemCode;
+            }
+            });
+            return false;
+          });
+    </script>
+    <!-- mock数据 -->
+    <script src="/app/mock/mock.min.js"></script>
+    <script src="/app/mock/mockdata.js"></script>
+<script type="text/javascript" src="build/angular.js?4af0a6dc01cd7276e29b"></script><script type="text/javascript" src="build/angularResource.js?4af0a6dc01cd7276e29b"></script><script type="text/javascript" src="build/angularouter.js?4af0a6dc01cd7276e29b"></script><script type="text/javascript" src="build/components.js?4af0a6dc01cd7276e29b"></script><script type="text/javascript" src="build/build.js?4af0a6dc01cd7276e29b"></script></body> 
+</html>

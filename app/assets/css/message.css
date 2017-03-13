@@ -1,0 +1,32 @@
+/*页面样式*/
+.msg-page {
+  font-size: 28px;
+}
+.tab-header {
+	font-size: 18px;
+	color: #428bca;
+	opacity: 1; 
+	float: left; 
+	margin-left: 0px;
+}
+.tab-header i {
+	top:3px;
+}
+.panel-btns a {
+	float: left !important;
+	margin-left: 0px !important;
+	margin-top: -9px !important;
+	color: #fff;
+	opacity: 1;
+}
+.btn-info {
+   background-color: #1CAF9A !important; 
+}
+.channels .btn-group button {
+   background-color: #1CAF9A !important; 
+   border: #1CAF9A !important;
+}
+.channels .btn-group button:hover {
+   background-color: #1CAF9A !important; 
+   border: #1CAF9A !important;
+}

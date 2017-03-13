@@ -1,0 +1,67 @@
+<div class="leftpanel">
+    <div class="logopanel">
+        <h1 style="font-size: 22px;"><span><img src="build/assets/images/header.png" alt="" style="width: 35px;"></span>&nbsp;&nbsp;&nbsp;&nbsp;消息发送平台<span></span></h1>
+    </div> 
+    <div class="leftpanelinner">
+        <h5 class="sidebartitle">导航</h5>
+        <ul class="nav nav-pills nav-stacked nav-bracket" id="main_nav-profiles">
+           <li><a ui-sref="messagetpl" class="unfinished"><i class="fa fa-home"></i> <span>首页</span></a></li>
+           <li class="nav-parent" ng-repeat="(mindex,p) in usermenus | filter:{menuType: 'MENU'}">
+           <a href="javascript:void(0);"><i ng-bind-html="p.menuIcon | htmlFilter"></i><span>{{p.menuName}}</span></a>
+               <ul class="children">
+                   <li ng-repeat="c in usermenus | filter:{menuType: 'NG_ROUTE',menuParentCode: p.menuRootCode}"><a href="#/{{c.menuExtendInfo}}" class="chactive" sid="{{mindex}}"><i class="fa fa-caret-right"></i>{{c.menuName}}</a></li>
+               </ul>
+           </li>
+
+
+           <li class="nav-parent">
+              <a ui-sref="/app/sendtpl" class="unfinished"><i class="fa fa-rocket"></i><span>app推送</span></a>
+               <ul class="children">
+                   <li>
+                     <a href="#/app/sendtpl" class="chactive">
+                       <i class="fa fa-caret-right"></i>
+                       模版管理
+                     </a>
+                   </li>
+                   <!-- <li>
+                     <a href="#/app/manualconfig" class="chactive">
+                       <i class="fa fa-caret-right"></i>
+                       手工推送配置
+                     </a>
+                   </li>
+                   <li>
+                     <a href="#/app/triggerconfig" class="chactive">
+                       <i class="fa fa-caret-right"></i>
+                       实时出发推送配置
+                     </a>
+                   </li>
+                   <li>
+                     <a href="#/app/sendlog" class="chactive">
+                       <i class="fa fa-caret-right"></i>
+                       推送记录
+                     </a>
+                   </li>
+                   <li>
+                     <a href="#/app/senduser" class="chactive">
+                       <i class="fa fa-caret-right"></i>
+                       用户管理
+                     </a>
+                   </li> -->
+                  <!--  <li>
+                     <a href="#/app/sendchart" class="chactive">
+                       <i class="fa fa-caret-right"></i>
+                       推送统计
+                     </a>
+                   </li> -->
+                   <li>
+                     <a href="#/msgsend/chart" class="chactive">
+                       <i class="fa fa-caret-right"></i>
+                       消息统计
+                     </a>
+                   </li>
+               </ul>
+           </li>
+
+        </ul>
+    </div>
+</div>

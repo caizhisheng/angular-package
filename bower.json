@@ -1,0 +1,27 @@
+{
+  "name": "web-base-frame",
+  "description": "前端脚手架V1\u001b[D\u001b[D\u001b[D\u001b[D\u001b[D\u001b[D\u001b[C\u001b[C\u001b[C\u001b[C\u001b[C\u001b[C\u001b[D\u001b[D基础架构\u001b[D\u001b[D\u001b[D\u001b[C\u001b[C\u001b[CV1\u001b[\u001b[C\u001bv1",
+  "main": "index.js",
+  "authors": [
+    "mike"
+  ],
+  "license": "MIT",
+  "keywords": [
+    "webpack/gulp/npm"
+  ],
+  "homepage": "",
+  "private": true,
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "angular": "^1.5.8",
+    "angular-resource": "^1.5.8",
+    "angular-ui-router": "^0.3.2",
+    "jquery": "^3.1.1"
+  }
+}
