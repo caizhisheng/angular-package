@@ -1,6 +1,6 @@
 {
-  "name": "web-base-frame",
-  "version": "1.0.1",
+  "name": "generator-angularpackage",
+  "version": "1.0.2",
   "description": "基于yeoman的项目快速生成器",
   "main": "index.js",
   "scripts": {
