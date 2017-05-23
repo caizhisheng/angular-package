@@ -1,6 +1,6 @@
 {
   "name": "generator-angularpackage",
-  "version": "1.0.3",
+  "version": "2.0.0",
   "description": "基于yeoman的项目快速生成器",
   "main": "index.js",
   "scripts": {
@@ -8,14 +8,14 @@
   },
   "repository": {
     "type": "git",
-    "url": "https://git.oschina.net/mike-ccc/angular-base-package.git"
+    "url": "https://github.com/caizhisheng/angular-package.git"
   },
   "keywords": [
     "yeoman/webpack/gulp/npm"
   ],
   "author": "mike",
   "license": "MIT",
-  "homepage": "http://git.oschina.net/mike-ccc/angular-base-package",
+  "homepage": "https://github.com/caizhisheng/angular-package",
   "devDependencies": {
     "angular": "1.5.9",
     "angular-ui-router": "0.3.2",
