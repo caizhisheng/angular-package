@@ -8,14 +8,14 @@
   },
   "repository": {
     "type": "git",
-    "url": "https://github.wanda-group.net/caizhisheng/ng-base-frame.git"
+    "url": "https://git.oschina.net/mike-ccc/angular-base-package.git"
   },
   "keywords": [
     "yeoman/webpack/gulp/npm"
   ],
   "author": "mike",
   "license": "MIT",
-  "homepage": "https://github.wanda-group.net/caizhisheng/ng-base-frame/blob/master",
+  "homepage": "http://git.oschina.net/mike-ccc/angular-base-package",
   "devDependencies": {
     "angular": "1.5.9",
     "angular-ui-router": "0.3.2",
