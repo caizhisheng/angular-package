@@ -1,6 +1,6 @@
 {
   "name": "generator-angularpackage",
-  "version": "2.0.0",
+  "version": "2.0.1",
   "description": "基于yeoman的项目快速生成器",
   "main": "index.js",
   "scripts": {
@@ -10,8 +10,11 @@
     "type": "git",
     "url": "https://github.com/caizhisheng/angular-package.git"
   },
+  "files": [
+    "generators"
+  ],
   "keywords": [
-    "yeoman/webpack/gulp/npm"
+    "yeoman-generator"
   ],
   "author": "mike",
   "license": "MIT",
