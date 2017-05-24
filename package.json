@@ -2,7 +2,7 @@
   "name": "generator-angularpackage",
   "version": "2.0.1",
   "description": "基于yeoman的项目快速生成器",
-  "main": "index.js",
+  "main": "generators/app/index.js",
   "scripts": {
     "bundle": "babel-node tools/run bundle"
   },
@@ -11,7 +11,10 @@
     "url": "https://github.com/caizhisheng/angular-package.git"
   },
   "files": [
-    "generators"
+    "generators",
+    "angular",
+    "webpack",
+    "gulp"
   ],
   "keywords": [
     "yeoman-generator"
